@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        url('./images/bottom-line.png') no-repeat,
+        url('./images/top-line.png') no-repeat,
+        url('./images/bg.svg') no-repeat center center fixed;
+    background-position:
+        top right,
+        bottom left,
+        center center;
+    background-size:
+        1210px auto,
+        780px auto,
+        cover;
+    background-attachment:
+        fixed,
+        fixed,
+        fixed;
+    position: relative;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0px 24px;
+}
+
+.top-line,
+.bottom-line {
+    position: fixed;
+}
+
+.top-line {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bottom-line {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+    z-index: 50;
+}
+
+/***** HEADER *****/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 76px 30px 76px 0px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo img {
+    width: 60px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.user-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.user-desc {
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.user-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-socials img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+
+/***** CARDS CONTAINER *****/
+.cards-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+    margin-bottom: 75px;
+    width: 100%;
+}
+
+/***** CARD *****/
+.card {
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: filter 0.3s ease;
+}
+
+.card:hover {
+    filter: drop-shadow(15px 25.981px 25px #d6450c);
+}
+
+.card-image {
+    position: relative;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.card-title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #fff;
+    font-size: 50px;
+    line-height: 36px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 28px 32px;
+}
+
+.card-image-food,
+.card-image-culture,
+.card-image-adventure {
+    background-image: none;
+}
+
+.subtext {
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.card-content {
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.card-heading {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.card-heading em {
+    font-style: italic;
+}
+
+.card-text {
+    font-size: 18px;
+    color: #060606;
+    font-weight: 400;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 80px;
+}
+
+.card-locations .location {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+    color: #ff6c00;
+    text-decoration: none;
+}
+
+.card-locations .location:hover {
+    text-decoration: underline;
+}
+
+.card-price {
+    font-size: 26px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #57575798;
+    border-radius: 50%;
+    transition: filter 0.2s, background 0.2s;
+    cursor: pointer;
+    margin-right: 0;
+    padding: 1px;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.contact-icon i,
+.contact-icon::before {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-icon i:hover {
+    color: white;
+}
+
+.contact-icon .email,
+.contact-icon::before {
+    padding: 0.5px;
+}
+
+.contact-icon:hover {
+    background: #0000009a;
+}
+
+.card:hover .card-heading span,
+.card:hover .card-heading em {
+    color: #ff6c00;
+    transition: color 0.3s ease;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #ae4200;
+    font-weight: 300;
+    font-family: "Figtree";
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.subtext {
+    display: block;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
