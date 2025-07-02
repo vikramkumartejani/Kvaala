@@ -44,9 +44,7 @@
                         <a href="https://www.linkedin.com/in/kristjankure/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="svg-icon-linkedin">
                             <img src="./images/linkedin.svg" alt="LinkedIn" />
                         </a>
-                        <a href="mailto:kristjan.kure@email.com" aria-label="Email" class="svg-icon-email">
-                            <img src="./images/email.svg" alt="Email" />
-                        </a>
+                        <span id="e123456789">[javascript protected email address]</span>
                     </div>
                 </div>
             </div>
@@ -216,6 +214,18 @@
     window.addEventListener('DOMContentLoaded', function() {
         input.focus();
     });
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function(){
+    var a = "+-.0123456789@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";
+    var b = a.split("").sort().join("");
+    var c = "kristjan.kure.1@gmail.com";
+    var d = "";
+    for (var e = 0; e < c.length; e++) d += b.charAt(a.indexOf(c.charAt(e)));
+    document.getElementById("e123456789").innerHTML = "<a href=\"mailto:" + d + "\" aria-label=\"Email\" class=\"svg-icon-email\"><img src='./images/email.svg' alt='Email' /></a>";
+})();
+/*]]>*/
 </script>
 </body>
 
