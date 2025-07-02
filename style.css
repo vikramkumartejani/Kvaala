@@ -60,10 +60,10 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     width: 100%;
     box-sizing: border-box;
-    padding: 76px 30px 76px 0px;
+    padding: 76px 0 76px 0px;
 }
 
 .logo {
@@ -138,13 +138,22 @@ body {
     width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .cards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    justify-content: unset;
+  }
+}
+
 /***** CARD *****/
 .card {
     background: #fff;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: filter 0.3s ease;
+    transition: color 0.5s ease, filter 0.5s ease;
 }
 
 .card:hover {
