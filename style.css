@@ -112,7 +112,7 @@ body {
   height: 22px;
   display: inline-block;
   vertical-align: middle;
-  transition: opacity 0.5s ease, filter 0.5s ease;
+  transition: opacity 0.5s ease;
   cursor: pointer;
 }
 
@@ -277,7 +277,7 @@ body {
   justify-content: center;
   background: #57575798;
   border-radius: 50%;
-  transition: color 0.5s ease, filter 0.5s ease, background 0.5s ease;
+  transition: color 0.5s ease, background 0.5s ease;
   cursor: pointer;
   margin-right: 0;
   padding: 1px;
