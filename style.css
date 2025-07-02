@@ -66,21 +66,8 @@ body {
     padding: 76px 0 76px 0px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-}
-
 .logo img {
-    width: 60px;
-}
-
-.logo h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #fff;
+    height: 60px;
 }
 
 .user-info {
@@ -116,8 +103,9 @@ body {
 
 .user-desc {
     color: #fff;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 16px;
+    line-height: 16px;
 }
 
 .user-socials {
