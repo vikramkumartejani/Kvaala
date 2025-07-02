@@ -133,7 +133,7 @@ body {
     height: 22px;
     display: inline-block;
     vertical-align: middle;
-    transition: filter 0.2s;
+    transition: color 0.5s ease, filter 0.5s ease;
     cursor: pointer;
 }
 .svg-icon-linkedin img:hover,
@@ -299,7 +299,7 @@ body {
     justify-content: center;
     background: #57575798;
     border-radius: 50%;
-    transition: filter 0.2s, background 0.2s;
+    transition: color 0.5s ease, filter 0.5s ease, background 0.2s;
     cursor: pointer;
     margin-right: 0;
     padding: 1px;
@@ -333,7 +333,7 @@ body {
 .card:hover .card-heading span,
 .card:hover .card-heading em {
     color: #ff6c00;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease, filter 0.5s ease;
 }
 
 .footer-text {
