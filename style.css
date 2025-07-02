@@ -100,7 +100,11 @@ body {
 .user-details {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+    text-align: right;
+    min-height: 76px;
 }
 
 .user-name {
@@ -119,13 +123,28 @@ body {
 .user-socials {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+}
+.svg-icon-linkedin img,
+.svg-icon-email img {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: filter 0.2s;
+    cursor: pointer;
+}
+.svg-icon-linkedin img:hover,
+.svg-icon-email img:hover {
+    opacity: 1;
 }
 
 .user-socials img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
+    opacity: 0.6;
     cursor: pointer;
 }
 
@@ -236,11 +255,22 @@ body {
     transition: text-decoration 0.3s ease;
     color: #ff6c00;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
-
 .card-locations .location:hover {
     text-decoration: underline;
 }
+.location-pin {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    margin-bottom: 1.5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 
 .card-price {
     font-size: 26px;
@@ -316,3 +346,229 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/* Password Protected */
+#password-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #fff7f0 0%, #ffedd5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Figtree', sans-serif;
+    transition: opacity 0.3s;
+    padding: 0 16px !important;
+}
+.password-modal {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(255, 108, 0, 0.13);
+    padding: 2.5rem 2rem 2rem 2rem;
+    min-width: 340px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    border: 2px solid #ff6c00;
+}
+.password-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff6c00;
+    text-align: center;
+}
+
+.password-modal-header{
+    text-align: center;
+}
+.password-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 8px #ff6c00aa);
+}
+.password-desc {
+    color: #ff6c00;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+.password-input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff7f0;
+    border-radius: 8px;
+    border: 1.5px solid #ff6c00;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#password-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 0.7rem 0.5rem 0.7rem 0.2rem;
+    flex: 1;
+    font-family: inherit;
+    color: #ff6c00;
+    font-weight: 600;
+}
+#toggle-password {
+    background: none;
+    border: none;
+    color: #ff6c00;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    transition: color 0.2s;
+    font-weight: 600;
+}
+#toggle-password:focus {
+    outline: 2px solid #ff6c00;
+}
+#password-submit {
+    width: 100%;
+    background: linear-gradient(90deg, #ff6c00 0%, #ff944d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 108, 0, 0.08);
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+}
+#password-submit:hover {
+    background: linear-gradient(90deg, #ff6c00 0%, #ff944d 100%);
+    filter: brightness(0.95);
+}
+#password-error {
+    color: #ef4444;
+    font-size: 0.98rem;
+    margin-top: 0.2rem;
+    display: none;
+    text-align: center;
+}
+@media (max-width: 700px) {
+    .password-modal {
+        min-width: unset;
+        width: 100%;
+        max-width: 98vw;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+    #password-overlay {
+        padding: 0 2px;
+    }
+    .password-modal-header h2 {
+        font-size: 1.1rem;
+    }
+    .password-modal {
+        gap: 0.7rem;
+    }
+    .password-input-group {
+        font-size: 0.95rem;
+    }
+    #password-submit {
+        font-size: 1rem;
+        padding: 0.6rem 0;
+    }
+}
+    .password-modal-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .password-logo {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0.5rem;
+    }
+    .password-modal-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e293b;
+    }
+    .password-desc {
+        color: #64748b;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .password-modal-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .password-input-group {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: #f1f5f9;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    #password-input {
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 1.1rem;
+        padding: 0.7rem 0.5rem 0.7rem 0.2rem;
+        flex: 1;
+        font-family: inherit;
+    }
+    #toggle-password {
+        background: none;
+        border: none;
+        color: #64748b;
+        font-size: 0.95rem;
+        cursor: pointer;
+        padding: 0 0.5rem;
+        transition: color 0.2s;
+    }
+    #toggle-password:focus {
+        outline: 2px solid #64748b;
+    }
+    #password-submit {
+        width: 100%;
+        background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.7rem 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+        transition: background 0.2s;
+    }
+    #password-submit:hover {
+        background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
+    }
+    #password-error {
+        color: #ef4444;
+        font-size: 0.98rem;
+        margin-top: 0.2rem;
+        display: none;
+        text-align: center;
+    }
+    @media (max-width: 500px) {
+        .password-modal {
+            min-width: 90vw;
+            padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+        }
+    }
