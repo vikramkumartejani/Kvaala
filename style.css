@@ -242,12 +242,9 @@ body {
   display: flex;
   align-items: start;
   gap: 2px;
-}
-
-.card-locations .location-icon {
-  width: 24px;
-  height: 18px;
-  margin-top: 2px;
+  background: url("./images/location.svg") no-repeat left top 0px;
+  background-size: 18px 18px;
+  padding-left: 22px;
 }
 .card-locations .location {
   font-size: 18px;
@@ -264,15 +261,6 @@ body {
 
 .card-locations .location:hover {
   border-bottom: 1px solid #ff6c00;
-}
-
-.location-pin {
-  width: 16px;
-  height: 16px;
-  margin-right: 2px;
-  margin-bottom: 1.5px;
-  vertical-align: middle;
-  display: inline-block;
 }
 
 .card-price {
