@@ -11,7 +11,24 @@
 </head>
 
 <body>
-    <div class="main-container">
+    <div id="password-overlay">
+        <div class="password-modal">
+            <div class="password-modal-header">
+                <img src="./images/logo-.svg" alt="Kvaala Logo" class="password-logo">
+                <h2>Protected Page</h2>
+                <p class="password-desc">Please enter the password to continue</p>
+            </div>
+            <div class="password-modal-body">
+                <div class="password-input-group">
+                    <input id="password-input" type="password" placeholder="Password" autocomplete="current-password" autofocus />
+                    <button id="toggle-password" type="button" aria-label="Show password" tabindex="-1">Show</button>
+                </div>
+                <button id="password-submit">Unlock</button>
+                <div id="password-error">Incorrect password. Try again.</div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container" style="filter:blur(4px);pointer-events:none;user-select:none;" id="main-content-blur">
         <!-- Header -->
         <header class="header">
             <div class="logo">
@@ -22,12 +39,14 @@
                 <img src="./images/mask.png" alt="Kristjan Kure" class="user-avatar">
                 <div class="user-details">
                     <span class="user-name">Kristjan Kure</span>
-                    <span class="user-desc">Driven by insight. </span>
+                    <span class="user-desc">Driven by insight.</span>
                     <div class="user-socials">
-                        <a href="https://www.linkedin.com/in/kristjankure/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin-in contact-icon" aria-label="LinkedIn"></i>
+                        <a href="https://www.linkedin.com/in/kristjankure/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="svg-icon-linkedin">
+                            <img src="./images/linkedin.svg" alt="LinkedIn" />
                         </a>
-                        <i class="fa-solid fa-envelope contact-icon email" aria-label="Email"></i>
+                        <a href="mailto:kristjan.kure@email.com" aria-label="Email" class="svg-icon-email">
+                            <img src="./images/email.svg" alt="Email" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -149,6 +168,55 @@
 
         <p class="footer-text">Kvaala is a trademark owned by Kristjan Kure</p>
     </div>
+<script>
+    // Password protection logic with show/hide password
+    const PASSWORD = "Vikr@m123@";
+    const overlay = document.getElementById('password-overlay');
+    const mainContent = document.getElementById('main-content-blur');
+    const input = document.getElementById('password-input');
+    const submit = document.getElementById('password-submit');
+    const error = document.getElementById('password-error');
+    const toggle = document.getElementById('toggle-password');
+
+    function unlockPage() {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
+        mainContent.style.filter = 'none';
+        mainContent.style.pointerEvents = 'auto';
+        mainContent.style.userSelect = 'auto';
+    }
+
+    function checkPassword() {
+        if (input.value === PASSWORD) {
+            error.style.display = 'none';
+            unlockPage();
+        } else {
+            error.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    }
+
+    submit.addEventListener('click', checkPassword);
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') checkPassword();
+    });
+    toggle.addEventListener('click', function() {
+        if (input.type === 'password') {
+            input.type = 'text';
+            toggle.textContent = 'Hide';
+        } else {
+            input.type = 'password';
+            toggle.textContent = 'Show';
+        }
+        input.focus();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+        input.focus();
+    });
+</script>
 </body>
 
 </html>
