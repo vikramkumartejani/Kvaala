@@ -67,7 +67,7 @@ body {
 }
 
 .logo img {
-    height: 60px;
+    max-height: 80px;
 }
 
 .user-info {
