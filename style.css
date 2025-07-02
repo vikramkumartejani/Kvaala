@@ -138,6 +138,7 @@ body {
     width: 100%;
 }
 
+
 @media (min-width: 1024px) {
   .cards-list {
     display: grid;
@@ -238,6 +239,9 @@ body {
     gap: 80px;
 }
 
+.card-locations  {
+    color: #ff6c00;
+    }
 .card-locations .location {
     font-size: 18px;
     font-weight: 400;
