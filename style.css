@@ -7,10 +7,12 @@
 body {
   background: url("./images/bottom-line.png") no-repeat,
     url("./images/top-line.png") no-repeat,
+    url("./images/white-line-top.svg.png") no-repeat,
+    url("./images/white-line-bottom.png") no-repeat,
     url("./images/bg.svg") no-repeat center center fixed;
-  background-position: top right, bottom left, center center;
-  background-size: 1210px auto, 780px auto, cover;
-  background-attachment: fixed, fixed, fixed;
+  background-position: top right, bottom left, top left, bottom left, center center;
+  background-size: 1210px auto, 780px auto, 780px auto, 450px auto, cover;
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
   background-color: #ff6c00;
   position: relative;
   font-family: "Figtree", sans-serif;
