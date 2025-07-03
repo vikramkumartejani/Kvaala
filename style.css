@@ -331,7 +331,7 @@ body {
 
 @media (max-width: 768px) {
   .card-heading {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
@@ -365,7 +365,7 @@ body {
   display: flex;
   align-items: start;
   gap: 2px;
-  background: url("./images/location.svg") no-repeat left top 0px;
+  background: url("./images/location.svg") no-repeat left top 2px;
   background-size: 18px 18px;
   padding-left: 22px;
 }
@@ -417,7 +417,8 @@ body {
 
 @media (max-width: 768px) {
   .card-price {
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 500;
   }
 }
 
