@@ -62,7 +62,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 76px 0 76px 0px;
-  gap: 8px;
+  gap: 12px;
 }
 
 @media (max-width: 620px) {
@@ -74,8 +74,13 @@ body {
   }
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
-  max-height: 80px;
+  max-height: 50px;
 }
 
 .user-info {
@@ -342,6 +347,12 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+  .card-text {
+    font-size: 14px;
+  }
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -378,7 +389,17 @@ body {
   .card-locations{
     font-size: 16px;
     padding-left: 20px;
-    
+  }
+
+  .card-locations .location{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card-locations .location{
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -391,6 +412,12 @@ body {
 @media (max-width: 1024px) {
   .card-price {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-price {
+    font-size: 18px;
   }
 }
 
