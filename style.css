@@ -147,6 +147,7 @@ body {
   gap: 10px;
   justify-content: flex-end;
   margin-bottom: 2px;
+  transition: opacity 0.5s ease;
 }
 
 .svg-icon-linkedin img,
@@ -207,6 +208,7 @@ body {
 
 .card:hover {
   filter: drop-shadow(15px 25.981px 25px #d6450c);
+  
 }
 
 .card-image {
@@ -278,16 +280,17 @@ body {
   flex-direction: column;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1060px) {
   .card-content {
     gap: 16px;
-    padding: 24px;
+    padding: 24px !important;
   }
 }
 
 @media (max-width: 768px) {
   .card-content {
     gap: 12px;
+    padding: 24px !important;
   }
 }
 
@@ -423,6 +426,7 @@ body {
 .card:hover .card-heading span,
 .card:hover .card-heading em {
   color: #ff6c00;
+  transition: color 0.5s ease;
 }
 
 .footer-text {
