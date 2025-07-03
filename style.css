@@ -10,8 +10,8 @@ body {
     url("./images/white-line-top.svg.png") no-repeat,
     url("./images/white-line-bottom.png") no-repeat,
     url("./images/bg.svg") no-repeat center center fixed;
-  background-position: top right, bottom left, top left, bottom left, center center;
-  background-size: 1210px auto, 780px auto, 780px auto, 450px auto, cover;
+  background-position: top right, bottom left, top left, bottom left, top center;
+  background-size: 1210px auto, 780px auto, 1000px auto, 450px auto, cover;
   background-attachment: fixed, fixed, fixed, fixed, fixed;
   background-color: #ff6c00;
   position: relative;
@@ -234,7 +234,7 @@ body {
 
 .card-title {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -244,6 +244,20 @@ body {
   font-weight: 700;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 28px 32px;
+}
+
+.card-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.01) 100%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 @media screen and (max-width: 1060px) {
