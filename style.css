@@ -475,7 +475,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(135deg, #fff7f0 0%, #ffedd5 100%);
   display: flex;
   align-items: center;
@@ -513,10 +513,11 @@ body {
 }
 
 .password-logo {
-  width: 48px;
-  height: 48px;
+  max-height: 70px;
+  max-width: 100%;
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 2px 8px #ff6c00aa);
+  padding: 0.5rem;
 }
 
 .password-desc {
@@ -627,12 +628,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-}
-
-.password-logo {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 0.5rem;
 }
 
 .password-modal-header h2 {
