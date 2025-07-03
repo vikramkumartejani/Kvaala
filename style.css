@@ -213,12 +213,12 @@ body {
     display: flex;
     flex-direction: column;
     transition: filter 0.5s ease;
+    height: 100%; /* Ensure card takes full height in grid cell */
 }
 
 .card:hover {
     filter: drop-shadow(15px 25.981px 25px #d6450c);
     transition: filter 0.5s ease !important;
-
 }
 
 .card-image {
@@ -303,6 +303,7 @@ body {
     display: flex;
     gap: 24px;
     flex-direction: column;
+    flex: 1 1 auto; /* Make content expand to fill space between image and footer */
 }
 
 @media (max-width: 1060px) {
@@ -363,6 +364,7 @@ body {
     justify-content: space-between;
     align-items: start;
     gap: 20px;
+    margin-top: auto; /* Push footer to the bottom of the card */
 }
 
 .card-locations {
