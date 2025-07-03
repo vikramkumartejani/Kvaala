@@ -208,7 +208,7 @@ body {
 
 .card:hover {
   filter: drop-shadow(15px 25.981px 25px #d6450c);
-  transition: filter 0.5s ease;
+  transition: filter 0.5s ease !important;
   
 }
 
