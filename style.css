@@ -556,7 +556,7 @@ body {
 }
 
 /* Password Protected */
-#password-overlay {
+.password-overlay {
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -625,7 +625,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-#password-input {
+.password-input {
   border: none;
   background: transparent;
   outline: none;
@@ -637,7 +637,7 @@ body {
   font-weight: 600;
 }
 
-#toggle-password {
+.toggle-password {
   background: none;
   border: none;
   color: #ff6c00;
@@ -648,11 +648,11 @@ body {
   font-weight: 600;
 }
 
-#toggle-password:focus {
+.toggle-password:focus {
   outline: 2px solid #ff6c00;
 }
 
-#password-submit {
+.password-submit {
   width: 100%;
   background: linear-gradient(90deg, #ff6c00 0%, #ff944d 100%);
   color: #fff;
@@ -667,12 +667,12 @@ body {
   letter-spacing: 0.5px;
 }
 
-#password-submit:hover {
+.password-submit:hover {
   background: linear-gradient(90deg, #ff6c00 0%, #ff944d 100%);
   filter: brightness(0.95);
 }
 
-#password-error {
+.password-error {
   color: #ef4444;
   font-size: 0.98rem;
   margin-top: 0.2rem;
@@ -688,7 +688,7 @@ body {
     padding: 1.2rem 0.5rem 1.5rem 0.5rem;
   }
 
-  #password-overlay {
+  .password-overlay {
     padding: 0 2px;
   }
 
@@ -704,7 +704,7 @@ body {
     font-size: 0.95rem;
   }
 
-  #password-submit {
+  .password-submit {
     font-size: 1rem;
     padding: 0.6rem 0;
   }
@@ -749,7 +749,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-#password-input {
+.password-input {
   border: none;
   background: transparent;
   outline: none;
@@ -759,7 +759,7 @@ body {
   font-family: inherit;
 }
 
-#toggle-password {
+.toggle-password {
   background: none;
   border: none;
   color: #64748b;
@@ -769,11 +769,11 @@ body {
   transition: color 0.2s;
 }
 
-#toggle-password:focus {
+.toggle-password:focus {
   outline: 2px solid #64748b;
 }
 
-#password-submit {
+.password-submit {
   width: 100%;
   background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
   color: #fff;
@@ -787,7 +787,7 @@ body {
   transition: background 0.2s;
 }
 
-#password-submit:hover {
+.password-submit:hover {
   background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
 }
 
