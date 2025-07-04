@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "lint:css": "stylelint \"**/*.css\""
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vikramkumartejani/Kvaala.git"
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/vikramkumartejani/Kvaala/issues"
   },
-  "homepage": "https://github.com/vikramkumartejani/Kvaala#readme"
+  "homepage": "https://github.com/vikramkumartejani/Kvaala#readme",
+  "devDependencies": {
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
 }
