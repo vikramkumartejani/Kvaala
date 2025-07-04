@@ -64,7 +64,7 @@ body {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  padding: 0px 24px;
+  padding: 0 24px;
 }
 
 @media (max-width: 1750px) {
@@ -76,7 +76,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding: 0px 16px;
+    padding: 0 16px;
     background-position: top right, left 15vh, top left, left 79vh, top center;
     background-size: 1000px auto, 700px auto, 620px auto, 400px auto, cover;
   }
@@ -103,7 +103,7 @@ body {
   align-items: right;
   width: 100%;
   box-sizing: border-box;
-  padding: 76px 0 76px 0px;
+  padding: 76px 0 76px 0;
   gap: 12px;
 }
 
