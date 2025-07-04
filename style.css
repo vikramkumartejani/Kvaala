@@ -791,7 +791,7 @@ body {
   background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
 }
 
-#password-error {
+.password-error {
   color: #ef4444;
   font-size: 0.98rem;
   margin-top: 0.2rem;
