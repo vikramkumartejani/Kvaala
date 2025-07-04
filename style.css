@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Figtree';
     src: url('./FontFigtree/Figtree-VariableFont_wght.ttf') format('truetype');
-    font-weight: 300 900;
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Figtree';
     src: url('./FontFigtree/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
-    font-weight: 300 900;
+    font-weight: 300;
     font-style: italic;
     font-display: swap;
 }
