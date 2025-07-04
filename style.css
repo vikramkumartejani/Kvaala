@@ -55,9 +55,8 @@ body {
     url("./images/white-line-bottom.png"),
     url("./images/bg.svg") center center fixed;
   background-repeat: no-repeat;
-  background-position: top right, bottom left, top right, bottom left,
-    top center;
-  background-size: 1210px auto, 780px auto, 1000px auto, 450px auto, cover;
+  background-position: top right, bottom left, top left, bottom left, top center;
+  background-size: 1210px auto, 780px auto, 1000px auto, 660px auto, cover;
   background-attachment: fixed, fixed, fixed, fixed, fixed;
   background-color: #ff6c00;
   position: relative;
@@ -77,7 +76,7 @@ body {
   body {
     background-position: top right, bottom left, top right, bottom left,
       top center;
-    background-size: 820px auto, 780px auto, 600px auto, 450px auto, cover;
+    background-size: 820px auto, 780px auto, 600px auto, 660px auto, cover;
   }
 }
 .top-line,
