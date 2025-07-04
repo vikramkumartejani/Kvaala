@@ -187,7 +187,6 @@ body {
 .cards-list {
     display: grid;
     grid-template-columns: 1fr;
-    /* 1 card per row by default */
     gap: 20px;
     margin-bottom: 75px;
     width: 100%;
@@ -202,7 +201,7 @@ body {
 }
 
 /* 3 cards per row on desktops (≥1024px) */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .cards-list {
         grid-template-columns: repeat(3, 1fr);
         gap: 45px;
