@@ -305,7 +305,6 @@ body {
     gap: 24px;
     flex-direction: column;
     flex: 1 1 auto;
-    /* Make content expand to fill space between image and footer */
 }
 
 @media (max-width: 1060px) {
@@ -367,7 +366,6 @@ body {
     align-items: start;
     gap: 20px;
     margin-top: auto;
-    /* Push footer to the bottom of the card */
 }
 
 .card-locations {
@@ -388,8 +386,6 @@ body {
     cursor: pointer;
     color: #ff6c00;
     text-decoration: none;
-    /* display; */
-    /* align-items: center; */
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s ease;
 }
