@@ -88,25 +88,6 @@ body {
     background-size: 700px auto, 620px auto, 400px auto, 300px auto, cover;
   }
 }
-.top-line,
-.bottom-line {
-  position: fixed;
-}
-
-.top-line {
-  top: 0;
-  right: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.bottom-line {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-}
 
 .main-container {
   max-width: 1440px;
