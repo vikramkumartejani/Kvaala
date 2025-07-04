@@ -196,7 +196,7 @@ body {
 @media (min-width: 768px) {
     .cards-list {
         grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
+        gap: 24px;
     }
 }
 
