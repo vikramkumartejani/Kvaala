@@ -543,7 +543,7 @@ body {
 /* Password Protected */
 .password-overlay {
     align-items: center;
-    background: black/40;
+    background: black;
     display: flex;
     font-family: "Figtree", sans-serif;
     height: 100%;
