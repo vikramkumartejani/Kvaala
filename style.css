@@ -5,22 +5,25 @@
 }
 
 body {
-    background: url("./images/bottom-line.png"),
+    background-image: 
+        url("./images/bottom-line.png"),
         url("./images/top-line.png"),
         url("./images/white-line-top.svg.png"),
         url("./images/white-line-bottom.png"),
-        url("./images/bg.svg") center center fixed;
+        url("./images/bg.svg");
     background-repeat: no-repeat;
     background-position: top right, bottom left, top left, bottom left, top center;
     background-size: 1210px auto, 780px auto, 1000px auto, 450px auto, cover;
     background-attachment: fixed, fixed, fixed, fixed, fixed;
     background-color: #ff6c00;
+
     position: relative;
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     padding: 0px 24px;
 }
+
 
 @media (max-width: 768px) {
     body {
@@ -266,9 +269,7 @@ body {
     height: 100px;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.01) 100%);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 @media screen and (max-width: 1060px) {
