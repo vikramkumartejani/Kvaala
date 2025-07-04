@@ -71,7 +71,7 @@ body {
         url("./images/black-center-left.svg"),
         url("./images/white-top-left-line.svg"),
         url("./images/white-bottom-left-line.svg"),
-        url("./images/bg.svg") center center fixed;
+        url("./images/bg.svg");
     background-attachment: fixed, fixed, fixed, fixed, fixed;
     background-color: #ff6c00;
     background-position: top right, left 20vh, top left, left 72vh, top center;
@@ -102,7 +102,7 @@ body {
 
 @media (max-width: 620px) {
     body {
-        background-position: top right, left 50vh, -60px 15vh, left 72vh, top center;
+        background-position: top right, left 50vh, -88px 25vh, left 72vh, top center;
         background-size: 700px auto, 620px auto, 400px auto, 300px auto, cover;
     }
 }
