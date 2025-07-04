@@ -50,13 +50,14 @@
 }
 
 body {
-  background: url("./images/bottom-line.png"), url("./images/top-line.png"),
-    url("./images/white-line-top.svg.png"),
-    url("./images/white-line-bottom.png"),
+  background: url("./images/black-top-line.svg"),
+    url("./images/black-center-left.svg"),
+    url("./images/white-top-left-line.svg"),
+    url("./images/white-bottom-left-line.svg"),
     url("./images/bg.svg") center center fixed;
   background-repeat: no-repeat;
-  background-position: top right, bottom left, top left, bottom left, top center;
-  background-size: 1210px auto, 780px auto, 1000px auto, 660px auto, cover;
+  background-position: top right, left 20vh, top left, left 72vh, top center;
+  background-size: 1800px auto, 1280px auto, 800px auto, 590px auto, cover;
   background-attachment: fixed, fixed, fixed, fixed, fixed;
   background-color: #ff6c00;
   position: relative;
@@ -66,17 +67,25 @@ body {
   padding: 0px 24px;
 }
 
+@media (max-width: 1750px) {
+  body {
+    background-position: top right, left 14vh, top left, left 79vh, top center;
+    background-size: 1200px auto, 800px auto, 650px auto, 450px auto, cover;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0px 16px;
+    background-position: top right, left 15vh, top left, left 79vh, top center;
+    background-size: 1000px auto, 700px auto, 620px auto, 400px auto, cover;
   }
 }
 
 @media (max-width: 620px) {
   body {
-    background-position: top right, bottom left, top right, bottom left,
-      top center;
-    background-size: 820px auto, 780px auto, 600px auto, 660px auto, cover;
+    background-position: top right, left 50vh, -60px 15vh, left 72vh, top center;
+    background-size: 700px auto, 620px auto, 400px auto, 300px auto, cover;
   }
 }
 .top-line,
@@ -441,8 +450,17 @@ body {
   transition: border-bottom 0.5s ease;
 }
 
+@media (max-width: 1024px) {
+  .card-locations a {
+    text-decoration: underline;
+  }
+  .card-locations a:hover {
+    text-decoration: none !important;
+  }
+}
+
 .card-locations a:hover {
-  border-bottom: 1px solid #ff6c00;
+  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
