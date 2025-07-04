@@ -73,7 +73,7 @@ body {
     .header {
         padding: 34px 0;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         flex-direction: column;
     }
 }
