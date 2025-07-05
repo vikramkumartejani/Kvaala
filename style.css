@@ -88,20 +88,20 @@ body {
     position: relative;
 }
 
-@media (width <= 1750px) {
+@media (width <=1750px) {
     body {
         background-position: top right, left 14vh, top left, left 79vh, top center;
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     body {
         background-position: top right, left 15vh, top left, left 79vh, top center;
         padding: 0 16px;
     }
 }
 
-@media (width <= 620px) {
+@media (width <=620px) {
     body {
         background-position: top right, left 50vh, -130px 27vh, left 72vh, top center;
     }
@@ -125,13 +125,13 @@ body {
     width: 100%;
 }
 
-@media (width <= 1024px) {
+@media (width <=1024px) {
     .header {
         padding: 45px 0;
     }
 }
 
-@media (width <= 620px) {
+@media (width <=620px) {
     .header {
         align-items: flex-start;
         flex-direction: column;
@@ -156,7 +156,7 @@ body {
     gap: 24px;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .user-info {
         gap: 16px;
     }
@@ -170,7 +170,7 @@ body {
     width: 76px;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .user-avatar {
         height: 60px;
         order: 2;
@@ -178,7 +178,7 @@ body {
     }
 }
 
-@media (width <= 620px) {
+@media (width <=620px) {
     .user-avatar {
         order: -1;
     }
@@ -194,7 +194,7 @@ body {
     text-align: right;
 }
 
-@media (width <= 620px) {
+@media (width <=620px) {
     .user-details {
         align-items: flex-start;
         text-align: left;
@@ -268,7 +268,7 @@ body {
 }
 
 /* 2 cards per row on tablets (≥768px) */
-@media (width >= 768px) {
+@media (width >=768px) {
     .cards-list {
         gap: 24px;
         grid-template-columns: repeat(2, 1fr);
@@ -276,7 +276,7 @@ body {
 }
 
 /* 3 cards per row on desktops (≥1024px) */
-@media (width >= 1280px) {
+@media (width >=1280px) {
     .cards-list {
         gap: 45px;
         grid-template-columns: repeat(3, 1fr);
@@ -336,7 +336,7 @@ body {
     z-index: 1;
 }
 
-@media screen and (width <= 1060px) {
+@media screen and (width <=1060px) {
     .card-title {
         font-size: 36px;
         gap: 10px;
@@ -373,14 +373,14 @@ body {
     padding: 32px;
 }
 
-@media (width <= 1060px) {
+@media (width <=1060px) {
     .card-content {
         gap: 16px;
         padding: 24px;
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .card-content {
         gap: 12px;
     }
@@ -391,13 +391,13 @@ body {
     font-weight: 900;
 }
 
-@media (width <= 1024px) {
+@media (width <=1024px) {
     .card-heading {
         font-size: 20px;
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .card-heading {
         font-size: 19px;
     }
@@ -409,13 +409,13 @@ body {
     font-weight: 400;
 }
 
-@media (width <= 1024px) {
+@media (width <=1024px) {
     .card-text {
         font-size: 16px;
     }
 }
 
-@media (width <= 450px) {
+@media (width <=450px) {
     .card-text {
         font-size: 14px;
     }
@@ -455,7 +455,7 @@ body {
     text-decoration: underline;
 }
 
-@media (width <= 1024px) {
+@media (width <=1024px) {
     .card-locations {
         font-size: 16px;
         padding-left: 20px;
@@ -471,7 +471,7 @@ body {
     }
 }
 
-@media (width <= 450px) {
+@media (width <=450px) {
     .card-locations a {
         font-size: 14px;
         line-height: 18px;
@@ -484,13 +484,13 @@ body {
     font-weight: 400;
 }
 
-@media (width <= 1024px) {
+@media (width <=1024px) {
     .card-price {
         font-size: 20px;
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .card-price {
         font-size: 19px;
         font-weight: 500;
@@ -686,7 +686,7 @@ body {
     text-align: center;
 }
 
-@media (width <= 700px) {
+@media (width <=700px) {
     .password-modal {
         gap: 0.7rem;
         max-width: 98vw;
@@ -713,7 +713,7 @@ body {
     }
 }
 
-@media (width <= 500px) {
+@media (width <=500px) {
     .password-modal {
         min-width: 90vw;
         padding: 1.2rem 0.5rem 1.5rem;
