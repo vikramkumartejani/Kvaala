@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <link rel="stylesheet" href="style.min.css">
+    <title>Kvaala - Terms and Conditions</title>
+    <style>
+        .terms-container {
+            background: white;
+            padding: 74px 60px;
+            margin-bottom: 50px;
+        }
+        
+        .terms-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .terms-main {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .terms-sidebar {
+            width: 250px;
+            margin-left: 40px;
+        }
+        
+        .terms-heading {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 900;
+            color: #333;
+        }
+        
+        .terms-section {
+            margin-bottom: 40px;
+        }
+        
+        .terms-section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .terms-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .terms-list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .terms-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .terms-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ff6c00;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .navigation li {
+            margin-bottom: 12px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: #444;
+            transition: color 0.3s;
+            font-size: 16px;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .navigation a:hover {
+            color: #ff6c00;
+        }
+        
+        .navigation li.active a {
+            color: #ff6c00;
+            font-weight: 700;
+            border-left: 3px solid #ff6c00;
+            padding-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-content {
+                flex-direction: column-reverse;
+            }
+            
+            .terms-sidebar {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
+            
+            .navigation {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .navigation li {
+                margin-right: 15px;
+            }
+            
+            .terms-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="password-overlay" id="password-overlay">
+        <div class="password-modal">
+            <div class="password-modal-header">
+                <img src="./images/logo.svg" alt="Kvaala - We create emotions" loading="lazy" class="password-logo">
+                <h2>Protected Page</h2>
+                <p class="password-desc">Please enter the password to continue</p>
+            </div>
+            <div class="password-modal-body">
+                <div class="password-input-group">
+                    <input id="password-input" class="password-input" type="password" placeholder="Password"
+                        autocomplete="current-password" autofocus>
+                    <button id="toggle-password" class="toggle-password" type="button" aria-label="Show password"
+                        tabindex="-1">
+                        Show
+                    </button>
+                </div>
+                <button class="password-submit" id="password-submit">Unlock</button>
+                <div class="password-error" id="password-error">
+                    Incorrect password. Try again.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content-blur">
+        <div class="main-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="logo">
+                    <img src="./images/logo.svg" alt="Kvaala - We create emotions">
+                </div>
+                <div class="user-info">
+                    <div class="user-details">
+                        <span class="user-name">Kristjan Kure</span>
+                        <span class="user-desc">Happy to hear from you!</span>
+                        <div class="user-socials">
+                            <a href="https://www.linkedin.com/in/kristjankure/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn" class="svg-icon-linkedin"
+                                title="Say hi on LinkedIn 👋">
+                                <img src="./images/linkedin.svg" alt="LinkedIn" loading="lazy">
+                            </a>
+                            <span id="e291670303">[javascript protected email address]</span>
+                            <script>
+                                eval(
+                                    'var a="6SgwTpDPViUs2LElzZ@u_Xv8mx4.c9e3AIBORQ1Ntq05HdnCjMarkKG+hWoYFJ7b-yf";var b=a.split("").sort().join("");var c="roMYFaqGgrJodgTLCKqMkg5+K";var d="";for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById("e291670303").innerHTML="<a href=\\"mailto:"+d+"\\">"+d+"</a>"'
+                                );
+                            </script>
+                        </div>
+                    </div>
+                    <img src="./images/mask.png" alt="Kristjan Kure" loading="lazy" class="user-avatar">
+                </div>
+            </header>
+
+            <!-- Terms and Conditions -->
+            <div class="terms-container">
+                <div class="terms-content">
+                    <div class="terms-main">
+                        <h1 class="terms-heading">Terms and Conditions</h1>
+                        
+                        <div class="terms-section" id="introduction">
+                            <h2 class="terms-section-title">Introduction</h2>
+                            <p class="terms-text">These Terms and Conditions ("Terms") govern your purchase and use of Kvaala's subscription-based online interactive map of Florida (the "Service"). By subscribing to or using the Service, you ("the user") agree to be bound by these Terms. If you do not agree, please do not purchase or use the Service.</p>
+                            <p class="terms-text">Kvaala ("we", "us", or "our") reserves the right to update or modify these Terms at any time. We will notify users of significant changes as outlined in the "Changes to Service and Terms" section below.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="description">
+                            <h2 class="terms-section-title">Description of the Service</h2>
+                            <p class="terms-text"><strong>Kvaala Florida Map Service:</strong> Our Service provides subscribers with access to an online, interactive map covering locations and information throughout Florida. The map's content is organized into various segments based on theme or target audience, including but not limited to Tourism, Food, Culture, Adventure, Shopping, For Singles, For Couples, For Families, and For Retirees. These segments allow you to explore selected locations, services, attractions, and points of interest relevant to each category.</p>
+                            
+                            <p class="terms-text"><strong>Scope of Content:</strong> The subscription grants you access to the map and its listings. No additional content (such as additional context, printed materials or personalized guides) is provided beyond the online map itself. The value of the subscription lies in the collection of locations, services, attractions and points of interest connected to the chosen segments on the map.</p>
+                            
+                            <p class="terms-text"><strong>Prohibited Activities:</strong> You agree not to misuse the Service. In particular, you shall not:</p>
+                            <ul class="terms-list">
+                                <li>Attempt to copy, reproduce, screenshot, scrape, download, or create derivative works from the map data or content, except as allowed by law or with our prior written permission.</li>
+                                <li>Use any automated means (including robots, spiders, or other data mining tools) to access, monitor, copy, or scrape any portion of the Service's content or data.</li>
+                                <li>Use the Service for commercial purposes or make the content available to non-subscribers (for example, by sharing your access link publicly or redistributing the data).</li>
+                                <li>Attempt to reverse engineer, hack, or disrupt the functionality or security of the website or map platform.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="terms-section" id="content-accuracy">
+                            <h2 class="terms-section-title">Content Accuracy and Updates</h2>
+                            <p class="terms-text"><strong>Data Updates:</strong> We strive to keep the map information up-to-date and accurate. Our goal is to update the map data at least twice a year, and we estimate that information on the map will be, at most, about generally within 6 months old. However, we do not guarantee that all information is current or error-free at all times. Some data may be outdated or may have changed since the last update.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="subscription">
+                            <h2 class="terms-section-title">Subscription Terms</h2>
+                            <p class="terms-text">Details of subscription duration, renewal terms, and pricing options will be provided during the purchase process.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="pricing">
+                            <h2 class="terms-section-title">Pricing and Payment</h2>
+                            <p class="terms-text">Current pricing information is displayed on the product page. All prices are subject to change with notice. Payment methods and processing details will be provided during checkout.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="cancellation">
+                            <h2 class="terms-section-title">Cancellation and Renewal</h2>
+                            <p class="terms-text">Information about how to cancel your subscription and automatic renewal policies will be provided in your account settings.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="permitted-use">
+                            <h2 class="terms-section-title">Permitted Use of the Service</h2>
+                            <p class="terms-text">The subscription grants you personal, non-transferable rights to access and view the content for personal use only.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="intellectual-property">
+                            <h2 class="terms-section-title">Intellectual Property Rights</h2>
+                            <p class="terms-text">All content, including but not limited to the map, data, design, and graphics, is owned by Kvaala and protected by copyright and other intellectual property laws.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="disclaimers">
+                            <h2 class="terms-section-title">Disclaimers and Limitation of Liability</h2>
+                            <p class="terms-text">The Service is provided "as is" without warranties of any kind. We shall not be liable for any damages arising from your use of the Service.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="privacy">
+                            <h2 class="terms-section-title">Privacy</h2>
+                            <p class="terms-text">Please refer to our Privacy Policy for information about how we collect, use, and share your data.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="changes">
+                            <h2 class="terms-section-title">Changes to Service and Terms</h2>
+                            <p class="terms-text">We may modify the Service or these Terms at any time, with notice provided for significant changes.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="waiver">
+                            <h2 class="terms-section-title">No Waiver</h2>
+                            <p class="terms-text">Our failure to enforce any part of these Terms shall not constitute a waiver.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="severability">
+                            <h2 class="terms-section-title">Severability</h2>
+                            <p class="terms-text">If any provision of these Terms is found invalid, the remaining provisions shall remain in effect.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="agreement">
+                            <h2 class="terms-section-title">Entire Agreement</h2>
+                            <p class="terms-text">These Terms constitute the entire agreement between you and Kvaala regarding the Service.</p>
+                        </div>
+                        
+                        <div class="terms-section" id="contact">
+                            <h2 class="terms-section-title">Contact Information</h2>
+                            <p class="terms-text">For questions about these Terms or the Service, please contact us through the provided email address.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="terms-sidebar">
+                        <ul class="navigation">
+                            <li class="active"><a href="#introduction">Introduction</a></li>
+                            <li><a href="#description">Description of the Service</a></li>
+                            <li><a href="#content-accuracy">Content Accuracy and Updates</a></li>
+                            <li><a href="#subscription">Subscription Terms</a></li>
+                            <li><a href="#pricing">Pricing and Payment</a></li>
+                            <li><a href="#cancellation">Cancellation and Renewal</a></li>
+                            <li><a href="#permitted-use">Permitted Use of the Service</a></li>
+                            <li><a href="#intellectual-property">Intellectual Property Rights</a></li>
+                            <li><a href="#disclaimers">Disclaimers and Limitation of Liability</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><a href="#changes">Changes to Service and Terms</a></li>
+                            <li><a href="#waiver">No Waiver</a></li>
+                            <li><a href="#severability">Severability</a></li>
+                            <li><a href="#agreement">Entire Agreement</a></li>
+                            <li><a href="#contact">Contact Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer-text">Kvaala is a trademark owned by Kristjan Kure</p>
+        </div>
+    </div>
+
+    <script>
+        const PASSWORD = "Vikr@m123@";
+        const overlay = document.getElementById("password-overlay");
+        const input = document.getElementById("password-input");
+        const submit = document.getElementById("password-submit");
+        const error = document.getElementById("password-error");
+        const toggle = document.getElementById("toggle-password");
+        const PASSWORD_KEY = "kvaala_password_unlocked";
+
+        function unlockPage() {
+            overlay.style.opacity = "0";
+            setTimeout(() => {
+                overlay.style.display = "none";
+            }, 300);
+        }
+
+        function checkPassword() {
+            if (input.value === PASSWORD) {
+                error.style.display = "none";
+                localStorage.setItem(PASSWORD_KEY, "true");
+                unlockPage();
+            } else {
+                error.style.display = "block";
+                input.value = "";
+                input.focus();
+            }
+        }
+
+        // Add active class to navigation items when scrolling
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.terms-section');
+            const navItems = document.querySelectorAll('.navigation li');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.querySelector('a').getAttribute('href').substring(1);
+                if (href === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        submit.addEventListener("click", checkPassword);
+        input.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") checkPassword();
+        });
+        toggle.addEventListener("click", function () {
+            if (input.type === "password") {
+                input.type = "text";
+                toggle.textContent = "Hide";
+            } else {
+                input.type = "password";
+                toggle.textContent = "Show";
+            }
+            input.focus();
+        });
+        window.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem(PASSWORD_KEY) === "true") {
+                unlockPage();
+            } else {
+                input.focus();
+            }
+        });
+        window.clearPasswordLock = function () {
+            localStorage.removeItem(PASSWORD_KEY);
+            location.reload();
+        };
+    </script>
+    <script>
+        (function () {
+            var a =
+                "6SgwTpDPViUs2LElzZ@u_Xv8mx4.c9e3AIBORQ1Ntq05HdnCjMarkKG+hWoYFJ7b-yf";
+            var b = a.split("").sort().join("");
+            var c = "roMYFaqGgrJodgTLCKqMkg5+K";
+            var d = "";
+            for (var e = 0; e < c.length; e++)
+                d += b.charAt(a.indexOf(c.charAt(e)));
+            document.getElementById("e291670303").innerHTML =
+                '<a href="mailto:' +
+                d +
+                '" aria-label="Email" class="svg-icon-email" title="Let\'s chat via email ✉️"><img src=\'./images/email.svg\' alt=\'Email\' /></a>';
+        })();
+    </script>
+</body>
+
+</html> 
