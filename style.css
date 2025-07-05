@@ -192,21 +192,24 @@ table {
 }
 
 body {
-  background-image: url("./images/bottom-line.png"),
-    url("./images/top-line.png"), url("./images/white-line-top.svg.png"),
-    url("./images/white-line-bottom.png"), url("./images/bg.svg");
-  background-repeat: no-repeat;
-  background-position: top right, bottom left, top left, bottom left, top center;
-  background-size: 1210px auto, 780px auto, 1000px auto, 450px auto, cover;
+  background-image: 
+    url("./images/black-top-line.svg"),
+    url("./images/black-center-left.svg"),
+    url("./images/white-top-left-line.svg"),
+    url("./images/white-bottom-left-line.svg"),
+    url("./images/bg.svg");
   background-attachment: fixed, fixed, fixed, fixed, fixed;
+  background-position: top right, left 20vh, top left, left 72vh, top center;
+  background-repeat: no-repeat;
   background-color: #ff6c00;
   font-family: Figtree, sans-serif;
-  font-optical-sizing: auto;
   font-style: normal;
-  position: relative;
+  font-optical-sizing: auto;
+  margin: 0;
   padding: 0 24px;
-  line-height: 1;
+  position: relative;
 }
+
 
 @media (width <=1750px) {
   body {
