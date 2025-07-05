@@ -58,12 +58,6 @@
   src: url("./FontFigtree/static/Figtree-BoldItalic.ttf") format("truetype");
 }
 
-/* Disable outdated CSSLint warnings */
-
-/* csslint box-model: false */
-
-/* csslint universal-selector: false */
-
 html,
 body,
 div,
