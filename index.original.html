@@ -39,7 +39,7 @@
             <!-- Header -->
             <header class="header">
                 <div class="logo">
-                    <img src="./images/logo.svg" alt="Kvaala - We create emotions">
+                    <a href="/"><img src="./images/logo.svg" alt="Kvaala - We create emotions"></a>
                 </div>
                 <div class="user-info">
                     <div class="user-details">
@@ -386,75 +386,7 @@
         </div>
     </div>
 
-    <script>
-        const PASSWORD = "Vikr@m123@";
-        const overlay = document.getElementById("password-overlay");
-        const input = document.getElementById("password-input");
-        const submit = document.getElementById("password-submit");
-        const error = document.getElementById("password-error");
-        const toggle = document.getElementById("toggle-password");
-        const PASSWORD_KEY = "kvaala_password_unlocked";
-
-        function unlockPage() {
-            overlay.style.opacity = "0";
-            setTimeout(() => {
-                overlay.style.display = "none";
-            }, 300);
-        }
-
-        function checkPassword() {
-            if (input.value === PASSWORD) {
-                error.style.display = "none";
-                localStorage.setItem(PASSWORD_KEY, "true");
-                unlockPage();
-            } else {
-                error.style.display = "block";
-                input.value = "";
-                input.focus();
-            }
-        }
-
-        submit.addEventListener("click", checkPassword);
-        input.addEventListener("keydown", function (e) {
-            if (e.key === "Enter") checkPassword();
-        });
-        toggle.addEventListener("click", function () {
-            if (input.type === "password") {
-                input.type = "text";
-                toggle.textContent = "Hide";
-            } else {
-                input.type = "password";
-                toggle.textContent = "Show";
-            }
-            input.focus();
-        });
-        window.addEventListener("DOMContentLoaded", function () {
-            if (localStorage.getItem(PASSWORD_KEY) === "true") {
-                unlockPage();
-            } else {
-                input.focus();
-            }
-        });
-        window.clearPasswordLock = function () {
-            localStorage.removeItem(PASSWORD_KEY);
-            location.reload();
-        };
-    </script>
-    <script>
-        (function () {
-            var a =
-                "6SgwTpDPViUs2LElzZ@u_Xv8mx4.c9e3AIBORQ1Ntq05HdnCjMarkKG+hWoYFJ7b-yf";
-            var b = a.split("").sort().join("");
-            var c = "roMYFaqGgrJodgTLCKqMkg5+K";
-            var d = "";
-            for (var e = 0; e < c.length; e++)
-                d += b.charAt(a.indexOf(c.charAt(e)));
-            document.getElementById("e291670303").innerHTML =
-                '<a href="mailto:' +
-                d +
-                '" aria-label="Email" class="svg-icon-email" title="Let\'s chat via email ✉️"><img src=\'./images/email.svg\' alt=\'Email\' /></a>';
-        })();
-    </script>
+    <script src="./scripts/password.js" defer></script>
+    <script src="./scripts/email-obfuscation.js" defer></script>
 </body>
-
 </html>
