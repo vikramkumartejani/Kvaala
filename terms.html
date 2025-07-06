@@ -304,18 +304,14 @@
 
         function handleIntroDescr() {
             const vh = window.innerHeight;
-
             const introRect = intro.getBoundingClientRect();
             const descrRect = descr.getBoundingClientRect();
-
             const introHeight = intro.offsetHeight;
             const descrHeight = descr.offsetHeight;
-
             const introVisible =
                 Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0);
             const descrVisible =
                 Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0);
-
             const introRatio = introVisible / introHeight;
             const descrRatio = descrVisible / descrHeight;
 
@@ -360,5 +356,4 @@
     });
 </script>
 </body>
-
 </html> 
