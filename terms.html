@@ -90,6 +90,7 @@
                             <h2 class="terms-section-title">Content Accuracy and Updates</h2>
                             <p class="terms-text"><strong>Data Updates:</strong> We strive to keep the map information up-to-date and accurate. Our goal is to update the map data at least twice a year, and we estimate that information on the map will be, at most, about generally within 6 months old. However, we do not guarantee that all information is current or error-free at all times. Some data may be outdated or may have changed since the last update.</p>
                             <p class="terms-text"><strong>Accuracy Disclaimer:</strong> While we endeavor to ensure that information on the map is updated and correct, we rely on various sources (including third-party data) to provide the content. Therefore, Kvaala makes no warranties or guarantees about the accuracy, completeness, or reliability of the information and listings provided. We strongly recommend that users independently verify critical details, such as operating hours, prices, and availability, directly with third-party providers before finalizing travel plans. Users should independently confirm important details (such as location, contact information, and current offerings) before making decisions based on the map.</p>
+                            <p class="terms-text"><strong>No Liability for Reliance:</strong> By using the Service, you understand and agree that Kvaala will not be responsible for any loss or damage resulting from your reliance on information obtained through the map. This includes, for example, situations where a listed restaurant, shop, or attraction is no longer operating or has changed its offerings. The Service is provided for general informational purposes "as is," and you assume full responsibility for how you use or interpret the content.</p>
                             <p class="terms-text"><strong>Categories and User Relevance:</strong> We have included a broad range of categories and segments in our Florida map to cover many interests and life stages. However, we acknowledge that not all categories or content will be relevant to every user’s personal situation. The inclusion of certain segments (for example, a "For Retirees" segment or a "For Singles" segment) is based on our vision to serve diverse groups. No offense or exclusion is intended if some categories do not apply to you or align with your stage of life. Users are encouraged to simply focus on the segments that interest them and disregard those that do not. If you have feedback about the segments or find any content concerning, please contact us (see Contact Information below) and we will consider your input for future updates.</p>
                         </div>
 
@@ -147,14 +148,6 @@
                             <p class="terms-text"><strong>Content Discretion:</strong> We strive to provide high-quality and relevant content, but user discretion is advised. Some information might be subjective (for example, what qualifies as a "top attraction" for retirees vs. for singles may differ). Also, listings could include content (like descriptions or user reviews if any) that are not authored by Kvaala. We are not responsible if you encounter any content you find disagreeable or if a listing does not meet your personal expectations. Please use your own judgment when deciding to visit places or use services listed on the map.</p>
                             <p class="terms-text"><strong>Limitation of Liability:</strong> To the maximum extent permitted by applicable law, in no event shall Kvaala, its officers, directors, or employees be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to, damages for lost profits, lost data, or other intangible losses, arising out of or relating to your access to or use of, or your inability to access or use, the Service. In no event shall Kvaala’s total aggregate liability to you for all claims arising out of or relating to the use of the Service exceed the greater of: (a) one hundred U.S. dollars ($100.00), or (b) the total amount of subscription fees paid by you to Kvaala in the twelve (12) months immediately preceding the event giving rise to the claim. The limitations in this section shall apply to any theory of liability, whether based on warranty, contract, statute, tort (including negligence), or otherwise, and whether or not Kvaala has been informed of the possibility of any such damage. Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitations may not apply to you.</p>
                             <p class="terms-text"><strong>Indemnification:</strong> You agree to indemnify and hold harmless Kvaala and its affiliates, officers, agents, and employees from any claim or demand (including reasonable attorneys’ fees) made by any third party due to or arising out of your breach of these Terms, your violation of any law or regulation, or your infringement of any rights of a third party in connection with your use of the Service. This means if someone else sues us because of something you did in violation of these Terms, you’ll take responsibility for the costs.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="intellectual-property">
-                            <h2 class="terms-section-title">Intellectual Property Rights</h2>
-                            <p class="terms-text"><strong>Automatic Renewal:</strong> Your monthly subscription will automatically continue each month until you cancel. By subscribing, you authorize us to charge your provided payment method automatically each month, without further action by you, at the then-current Subscription Fee.</p>
-                            <p class="terms-text"><strong>Cancellation by You:</strong> You may cancel your monthly subscription at any time to prevent future renewal charges. To cancel, please use the self-service cancellation link provided in your original purchase confirmation email or contact our support team at support@kvaala.com. Cancellation must be available in a manner at least as easy as the method you used to subscribe.Cancellation will be effective at the end of your current paid monthly billing period. You will retain access to the Service for the remainder of the period you have paid for.</p>
-                            <p class="terms-text"><strong>No Refund on Cancellation:</strong> As noted above, when you cancel, you will not receive a refund for the current subscription month. You simply will not be billed for subsequent months. We do not offer refunds for partial use of the Service or for forgetting to cancel in time. It is your responsibility to manage your subscription and cancel if you do not want to renew.</p>
-                            <p class="terms-text"><strong>Cancellation by Us:</strong> We reserve the right to terminate or refuse the subscription service to any individual at our discretion, for example, in cases of fraud, abuse, violation of these Terms, or other legitimate reasons. If Kvaala ends your subscription early due to no fault of yours (for instance, if we decide to discontinue the Service entirely), we may provide a pro-rata refund for the remaining unused period of your subscription. However, if termination is due to your violation of these Terms (e.g., misuse of the content, sharing access, etc.), we will generally provide you with notice and a reasonable opportunity to cure the breach (if curable) before termination, unless the breach is severe, immediate, or ongoing (e.g., fraud, public sharing of access credentials). In such cases, no refund will be provided. We will generally provide notice to you if we cancel your subscription, along with the reason and the effective date of termination.</p>
                         </div>
                         
                         <div class="terms-section" id="privacy">
@@ -282,41 +275,107 @@
             location.reload();
         };
     </script>
-    <script>
-        /* =======  Dynamic sidebar highlighting  ======= */
-        document.addEventListener('DOMContentLoaded', () => {
-          const navLinks = document.querySelectorAll('.navigation a');
-        
-          const sections = Array.from(navLinks)
-            .map(link => document.querySelector(link.getAttribute('href')))
-            .filter(Boolean);                         // ignore missing IDs
-        
-          const setActive = id => {
-            document.querySelector('.navigation .active')?.classList.remove('active');
-            document
-              .querySelector(`.navigation a[href="#${id}"]`)
-              ?.parentElement.classList.add('active');
-          };
-        
-          navLinks.forEach(link => {
-            link.addEventListener('click', () => setActive(link.hash.slice(1)));
-          });
-        
-          const observer = new IntersectionObserver(
-            entries => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) setActive(entry.target.id);
-              });
-            },
-            {
-              rootMargin: '-50% 0px -50% 0px',
-              threshold: 0
-            }
-          );
-        
-          sections.forEach(section => observer.observe(section));
+   <script>
+/* =======  Dynamic sidebar highlighting (updated thresholds)  ======= */
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.navigation a');
+
+  /* Collect section elements in nav order */
+  const sections = Array.from(navLinks)
+    .map(link => document.querySelector(link.hash))
+    .filter(Boolean);
+
+  const intro = document.getElementById('introduction');
+  const descr = document.getElementById('description');
+
+  /* ---------- helper to toggle .active ---------- */
+  function setActive(id) {
+    const current = document.querySelector('.navigation .active');
+    const target  = document.querySelector(`.navigation a[href="#${id}"]`)?.parentElement;
+    if (target && current !== target) {
+      current?.classList.remove('active');
+      target.classList.add('active');
+    }
+  }
+
+  /* ---------- click → active instantly ---------- */
+  navLinks.forEach(link =>
+    link.addEventListener('click', () =>
+      setTimeout(() => setActive(link.hash.slice(1)), 0)
+    )
+  );
+
+  /* ---------- special logic for intro & description ---------- */
+  function handleIntroDescr() {
+    const vh = window.innerHeight;
+
+    const introRect = intro.getBoundingClientRect();
+    const descrRect = descr.getBoundingClientRect();
+
+    const introHeight = intro.offsetHeight;
+    const descrHeight = descr.offsetHeight;
+
+    /* How many pixels of each section are visible? */
+    const introVisible =
+      Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0);
+    const descrVisible =
+      Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0);
+
+    const introRatio = introVisible / introHeight;
+    const descrRatio = descrVisible / descrHeight;
+
+    /* Rule 1 – Intro stays active if ≥ 50 % visible */
+    if (introRatio >= 0.5) {
+      setActive('introduction');
+      return true; // handled
+    }
+
+    /* Rule 2 – Otherwise Description becomes active if ≥ 50 % visible */
+    if (descrRatio >= 0.5) {
+      setActive('description');
+      return true;
+    }
+
+    /* Neither rule matched → let the observer handle it */
+    return false;
+  }
+
+  /* ---------- observer for every section except the first two ---------- */
+  const restSections = sections.filter(sec => sec !== intro && sec !== descr);
+
+  const io = new IntersectionObserver(
+    entries => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (visible && !handleIntroDescr()) setActive(visible.target.id);
+    },
+    { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+  );
+
+  restSections.forEach(sec => io.observe(sec));
+
+  /* ---------- scroll listener (throttled) ---------- */
+  let ticking = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleIntroDescr();
+          ticking = false;
         });
-        </script>        
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  /* Run once on load */
+  handleIntroDescr();
+});
+</script>
+       
 </body>
 
 </html> 

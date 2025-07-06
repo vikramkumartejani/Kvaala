@@ -367,7 +367,7 @@ body {
 .terms-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 74px;
 }
 
 @media (width <= 1440px) {
@@ -382,7 +382,7 @@ body {
 }
 
 .terms-sidebar {
-  min-width: 299px;
+  min-width: 320px;
   margin-left: 40px;
 }
 
