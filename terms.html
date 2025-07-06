@@ -275,107 +275,90 @@
             location.reload();
         };
     </script>
-   <script>
-/* =======  Dynamic sidebar highlighting (updated thresholds)  ======= */
-document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.navigation a');
+    <script>
+    /* =======  Dynamic sidebar highlighting (updated thresholds)  ======= */
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.navigation a');
 
-  /* Collect section elements in nav order */
-  const sections = Array.from(navLinks)
-    .map(link => document.querySelector(link.hash))
-    .filter(Boolean);
+        const sections = Array.from(navLinks)
+            .map(link => document.querySelector(link.hash))
+            .filter(Boolean);
 
-  const intro = document.getElementById('introduction');
-  const descr = document.getElementById('description');
+        const intro = document.getElementById('introduction');
+        const descr = document.getElementById('description');
 
-  /* ---------- helper to toggle .active ---------- */
-  function setActive(id) {
-    const current = document.querySelector('.navigation .active');
-    const target  = document.querySelector(`.navigation a[href="#${id}"]`)?.parentElement;
-    if (target && current !== target) {
-      current?.classList.remove('active');
-      target.classList.add('active');
-    }
-  }
+        function setActive(id) {
+            const current = document.querySelector('.navigation .active');
+            const target = document.querySelector(`.navigation a[href="#${id}"]`)?.parentElement;
+            if (target && current !== target) {
+                current?.classList.remove('active');
+                target.classList.add('active');
+            }
+        }
 
-  /* ---------- click → active instantly ---------- */
-  navLinks.forEach(link =>
-    link.addEventListener('click', () =>
-      setTimeout(() => setActive(link.hash.slice(1)), 0)
-    )
-  );
+        navLinks.forEach(link =>
+            link.addEventListener('click', () =>
+                setTimeout(() => setActive(link.hash.slice(1)), 0)
+            )
+        );
 
-  /* ---------- special logic for intro & description ---------- */
-  function handleIntroDescr() {
-    const vh = window.innerHeight;
+        function handleIntroDescr() {
+            const vh = window.innerHeight;
 
-    const introRect = intro.getBoundingClientRect();
-    const descrRect = descr.getBoundingClientRect();
+            const introRect = intro.getBoundingClientRect();
+            const descrRect = descr.getBoundingClientRect();
 
-    const introHeight = intro.offsetHeight;
-    const descrHeight = descr.offsetHeight;
+            const introHeight = intro.offsetHeight;
+            const descrHeight = descr.offsetHeight;
 
-    /* How many pixels of each section are visible? */
-    const introVisible =
-      Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0);
-    const descrVisible =
-      Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0);
+            const introVisible =
+                Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0);
+            const descrVisible =
+                Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0);
 
-    const introRatio = introVisible / introHeight;
-    const descrRatio = descrVisible / descrHeight;
+            const introRatio = introVisible / introHeight;
+            const descrRatio = descrVisible / descrHeight;
 
-    /* Rule 1 – Intro stays active if ≥ 50 % visible */
-    if (introRatio >= 0.5) {
-      setActive('introduction');
-      return true; // handled
-    }
+            if (introRatio >= 0.5) {
+                setActive('introduction');
+                return true; // handled
+            }
+            if (descrRatio >= 0.5) {
+                setActive('description');
+                return true;
+            }
+            return false;
+        }
 
-    /* Rule 2 – Otherwise Description becomes active if ≥ 50 % visible */
-    if (descrRatio >= 0.5) {
-      setActive('description');
-      return true;
-    }
+        const restSections = sections.filter(sec => sec !== intro && sec !== descr);
+        const io = new IntersectionObserver(
+            entries => {
+                const visible = entries
+                    .filter(e => e.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+                if (visible && !handleIntroDescr()) setActive(visible.target.id);
+            },
+            { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+        );
 
-    /* Neither rule matched → let the observer handle it */
-    return false;
-  }
-
-  /* ---------- observer for every section except the first two ---------- */
-  const restSections = sections.filter(sec => sec !== intro && sec !== descr);
-
-  const io = new IntersectionObserver(
-    entries => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-      if (visible && !handleIntroDescr()) setActive(visible.target.id);
-    },
-    { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
-  );
-
-  restSections.forEach(sec => io.observe(sec));
-
-  /* ---------- scroll listener (throttled) ---------- */
-  let ticking = false;
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleIntroDescr();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
-
-  /* Run once on load */
-  handleIntroDescr();
-});
+        restSections.forEach(sec => io.observe(sec));
+        let ticking = false;
+        window.addEventListener(
+            'scroll',
+            () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        handleIntroDescr();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            },
+            { passive: true }
+        );
+        handleIntroDescr();
+    });
 </script>
-       
 </body>
 
 </html> 
