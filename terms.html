@@ -5,129 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="terms-styles.css">
     <title>Kvaala - Terms and Conditions</title>
-    <style>
-        .terms-container {
-            background: white;
-            padding: 74px 60px;
-            margin-bottom: 50px;
-        }
-        
-        .terms-content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .terms-main {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .terms-sidebar {
-            width: 250px;
-            margin-left: 40px;
-        }
-        
-        .terms-heading {
-            font-size: 32px;
-            margin-bottom: 30px;
-            font-weight: 900;
-            color: #333;
-        }
-        
-        .terms-section {
-            margin-bottom: 40px;
-        }
-        
-        .terms-section-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .terms-text {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #444;
-            margin-bottom: 20px;
-        }
-        
-        .terms-list {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .terms-list li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 20px;
-            line-height: 1.5;
-        }
-        
-        .terms-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #ff6c00;
-            font-weight: bold;
-        }
-        
-        .navigation {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .navigation li {
-            margin-bottom: 12px;
-        }
-        
-        .navigation a {
-            text-decoration: none;
-            color: #444;
-            transition: color 0.3s;
-            font-size: 16px;
-            display: block;
-            padding: 5px 0;
-        }
-        
-        .navigation a:hover {
-            color: #ff6c00;
-        }
-        
-        .navigation li.active a {
-            color: #ff6c00;
-            font-weight: 700;
-            border-left: 3px solid #ff6c00;
-            padding-left: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .terms-content {
-                flex-direction: column-reverse;
-            }
-            
-            .terms-sidebar {
-                width: 100%;
-                margin-left: 0;
-                margin-bottom: 30px;
-            }
-            
-            .navigation {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            .navigation li {
-                margin-right: 15px;
-            }
-            
-            .terms-container {
-                padding: 25px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -159,29 +38,25 @@
         <div class="main-container">
             <!-- Header -->
             <header class="header">
-                <div class="logo">
-                    <img src="./images/logo.svg" alt="Kvaala - We create emotions">
-                </div>
-                <div class="user-info">
-                    <div class="user-details">
-                        <span class="user-name">Kristjan Kure</span>
-                        <span class="user-desc">Happy to hear from you!</span>
-                        <div class="user-socials">
-                            <a href="https://www.linkedin.com/in/kristjankure/" target="_blank"
-                                rel="noopener noreferrer" aria-label="LinkedIn" class="svg-icon-linkedin"
-                                title="Say hi on LinkedIn 👋">
-                                <img src="./images/linkedin.svg" alt="LinkedIn" loading="lazy">
-                            </a>
-                            <span id="e291670303">[javascript protected email address]</span>
-                            <script>
-                                eval(
-                                    'var a="6SgwTpDPViUs2LElzZ@u_Xv8mx4.c9e3AIBORQ1Ntq05HdnCjMarkKG+hWoYFJ7b-yf";var b=a.split("").sort().join("");var c="roMYFaqGgrJodgTLCKqMkg5+K";var d="";for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById("e291670303").innerHTML="<a href=\\"mailto:"+d+"\\">"+d+"</a>"'
-                                );
-                            </script>
-                        </div>
+                    <div class="logo">
+                        <img src="./images/logo.svg" alt="Kvaala - We create emotions">
                     </div>
-                    <img src="./images/mask.png" alt="Kristjan Kure" loading="lazy" class="user-avatar">
-                </div>
+                    <nav class="navbar">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">Terms and conditions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">About us</a>
+                            </li>
+                        </ul>
+                    </nav>
             </header>
 
             <!-- Terms and Conditions -->
@@ -214,66 +89,9 @@
                         <div class="terms-section" id="content-accuracy">
                             <h2 class="terms-section-title">Content Accuracy and Updates</h2>
                             <p class="terms-text"><strong>Data Updates:</strong> We strive to keep the map information up-to-date and accurate. Our goal is to update the map data at least twice a year, and we estimate that information on the map will be, at most, about generally within 6 months old. However, we do not guarantee that all information is current or error-free at all times. Some data may be outdated or may have changed since the last update.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="subscription">
-                            <h2 class="terms-section-title">Subscription Terms</h2>
-                            <p class="terms-text">Details of subscription duration, renewal terms, and pricing options will be provided during the purchase process.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="pricing">
-                            <h2 class="terms-section-title">Pricing and Payment</h2>
-                            <p class="terms-text">Current pricing information is displayed on the product page. All prices are subject to change with notice. Payment methods and processing details will be provided during checkout.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="cancellation">
-                            <h2 class="terms-section-title">Cancellation and Renewal</h2>
-                            <p class="terms-text">Information about how to cancel your subscription and automatic renewal policies will be provided in your account settings.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="permitted-use">
-                            <h2 class="terms-section-title">Permitted Use of the Service</h2>
-                            <p class="terms-text">The subscription grants you personal, non-transferable rights to access and view the content for personal use only.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="intellectual-property">
-                            <h2 class="terms-section-title">Intellectual Property Rights</h2>
-                            <p class="terms-text">All content, including but not limited to the map, data, design, and graphics, is owned by Kvaala and protected by copyright and other intellectual property laws.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="disclaimers">
-                            <h2 class="terms-section-title">Disclaimers and Limitation of Liability</h2>
-                            <p class="terms-text">The Service is provided "as is" without warranties of any kind. We shall not be liable for any damages arising from your use of the Service.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="privacy">
-                            <h2 class="terms-section-title">Privacy</h2>
-                            <p class="terms-text">Please refer to our Privacy Policy for information about how we collect, use, and share your data.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="changes">
-                            <h2 class="terms-section-title">Changes to Service and Terms</h2>
-                            <p class="terms-text">We may modify the Service or these Terms at any time, with notice provided for significant changes.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="waiver">
-                            <h2 class="terms-section-title">No Waiver</h2>
-                            <p class="terms-text">Our failure to enforce any part of these Terms shall not constitute a waiver.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="severability">
-                            <h2 class="terms-section-title">Severability</h2>
-                            <p class="terms-text">If any provision of these Terms is found invalid, the remaining provisions shall remain in effect.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="agreement">
-                            <h2 class="terms-section-title">Entire Agreement</h2>
-                            <p class="terms-text">These Terms constitute the entire agreement between you and Kvaala regarding the Service.</p>
-                        </div>
-                        
-                        <div class="terms-section" id="contact">
-                            <h2 class="terms-section-title">Contact Information</h2>
-                            <p class="terms-text">For questions about these Terms or the Service, please contact us through the provided email address.</p>
+                            <p class="terms-text"><strong>Accuracy Disclaimer:</strong> While we endeavor to ensure that information on the map is updated and correct, we rely on various sources (including third-party data) to provide the content. Therefore, Kvaala makes no warranties or guarantees about the accuracy, completeness, or reliability of the information and listings provided. We strongly recommend that users independently verify critical details, such as operating hours, prices, and availability, directly with third-party providers before finalizing travel plans. Users should independently confirm important details (such as location, contact information, and current offerings) before making decisions based on the map.</p>
+                            <p class="terms-text"><strong>No Liability for Reliance:</strong> By using the Service, you understand and agree that Kvaala will not be responsible for any loss or damage resulting from your reliance on information obtained through the map. This includes, for example, situations where a listed restaurant, shop, or attraction is no longer operating or has changed its offerings.
+                            </p>
                         </div>
                     </div>
                     
@@ -331,30 +149,6 @@
             }
         }
 
-        // Add active class to navigation items when scrolling
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.terms-section');
-            const navItems = document.querySelectorAll('.navigation li');
-            
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                const href = item.querySelector('a').getAttribute('href').substring(1);
-                if (href === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
         submit.addEventListener("click", checkPassword);
         input.addEventListener("keydown", function (e) {
             if (e.key === "Enter") checkPassword();
@@ -382,20 +176,40 @@
         };
     </script>
     <script>
-        (function () {
-            var a =
-                "6SgwTpDPViUs2LElzZ@u_Xv8mx4.c9e3AIBORQ1Ntq05HdnCjMarkKG+hWoYFJ7b-yf";
-            var b = a.split("").sort().join("");
-            var c = "roMYFaqGgrJodgTLCKqMkg5+K";
-            var d = "";
-            for (var e = 0; e < c.length; e++)
-                d += b.charAt(a.indexOf(c.charAt(e)));
-            document.getElementById("e291670303").innerHTML =
-                '<a href="mailto:' +
-                d +
-                '" aria-label="Email" class="svg-icon-email" title="Let\'s chat via email ✉️"><img src=\'./images/email.svg\' alt=\'Email\' /></a>';
-        })();
-    </script>
+        /* =======  Dynamic sidebar highlighting  ======= */
+        document.addEventListener('DOMContentLoaded', () => {
+          const navLinks = document.querySelectorAll('.navigation a');
+        
+          const sections = Array.from(navLinks)
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);                         // ignore missing IDs
+        
+          const setActive = id => {
+            document.querySelector('.navigation .active')?.classList.remove('active');
+            document
+              .querySelector(`.navigation a[href="#${id}"]`)
+              ?.parentElement.classList.add('active');
+          };
+        
+          navLinks.forEach(link => {
+            link.addEventListener('click', () => setActive(link.hash.slice(1)));
+          });
+        
+          const observer = new IntersectionObserver(
+            entries => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) setActive(entry.target.id);
+              });
+            },
+            {
+              rootMargin: '-50% 0px -50% 0px',
+              threshold: 0
+            }
+          );
+        
+          sections.forEach(section => observer.observe(section));
+        });
+        </script>        
 </body>
 
 </html> 
