@@ -1,36 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".navigation a");
+  /* grab <button> elements instead of <a> */
+  const navLinks = document.querySelectorAll(".navigation button");
+
+  /* map their data‑target attribute to the actual sections */
   const sections = Array.from(navLinks)
-    .map(link => document.querySelector(link.hash))
+    .map(btn => document.getElementById(btn.dataset.target))
     .filter(Boolean);
+
   const intro = document.getElementById("introduction");
   const descr = document.getElementById("description");
 
   function setActive(id) {
     const current = document.querySelector(".navigation .active");
-    const target = document.querySelector(`.navigation a[href="#${id}"]`)?.parentElement;
-    if (target && current !== target) {
+    const targetLi = document.querySelector(
+      `.navigation button[data-target="${id}"]`
+    )?.parentElement;
+    if (targetLi && current !== targetLi) {
       current?.classList.remove("active");
-      target.classList.add("active");
+      targetLi.classList.add("active");
     }
   }
 
-  navLinks.forEach(link =>
-    link.addEventListener("click", () =>
-      setTimeout(() => setActive(link.hash.slice(1)), 0)
-    )
+  /* click: smooth‑scroll & set active */
+  navLinks.forEach(btn =>
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.target;
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      /* delay ensures scrollIntoView happens first */
+      setTimeout(() => setActive(id), 0);
+    })
   );
 
+  /* ---------------- intro / description visibility logic ---------------- */
   function handleIntroDescr() {
     const vh = window.innerHeight;
     const introRect = intro.getBoundingClientRect();
     const descrRect = descr.getBoundingClientRect();
-    const introHeight = intro.offsetHeight;
-    const descrHeight = descr.offsetHeight;
-    const introVisible = Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0);
-    const descrVisible = Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0);
-    const introRatio = introVisible / introHeight;
-    const descrRatio = descrVisible / descrHeight;
+    const introRatio =
+      (Math.min(introRect.bottom, vh) - Math.max(introRect.top, 0)) /
+      intro.offsetHeight;
+    const descrRatio =
+      (Math.min(descrRect.bottom, vh) - Math.max(descrRect.top, 0)) /
+      descr.offsetHeight;
 
     if (introRatio >= 0.5) {
       setActive("introduction");
@@ -43,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return false;
   }
 
+  /* ---------------- IntersectionObserver for the rest ---------------- */
   const restSections = sections.filter(sec => sec !== intro && sec !== descr);
+
   const io = new IntersectionObserver(entries => {
     const visible = entries
       .filter(e => e.isIntersecting)
@@ -56,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   restSections.forEach(sec => io.observe(sec));
 
+  /* ---------------- throttled scroll listener ---------------- */
   let ticking = false;
   window.addEventListener("scroll", () => {
     if (!ticking) {
@@ -67,5 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, { passive: true });
 
+  /* run once on load */
   handleIntroDescr();
 });

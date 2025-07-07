@@ -495,17 +495,20 @@ body {
   position: relative;
 }
 
-.navigation a {
-  text-decoration: none;
+.navigation button {
+  all: unset; /* removes all default button styling */
+  cursor: pointer;
+  font-size: 18px;
   color: #000;
   transition: color 0.3s;
-  font-size: 18px;
   display: block;
   padding: 5px 0 5px 10px;
+  width: 100%;
+  text-align: left;
 }
 
 @media (width <= 1024px) {
-  .navigation a {
+  .navigation button {
     font-size: 16px;
   }
 }
@@ -514,7 +517,7 @@ body {
   color: #ff6c00;
 }
 
-.navigation li.active a {
+.navigation li.active button {
   color: #ff6c00;
   font-weight: 700;
 }
@@ -534,12 +537,10 @@ body {
 
 @media (width <= 768px) {
   .navigation li.active::before{
-    /* left: -14px;
-    height: 13px; */
     background-image: none
   }
   
-  .navigation a{
+  .navigation button{
     padding: 5px 10px;
   }
 }
@@ -573,14 +574,6 @@ strong {
 
   .terms-container {
     padding: 25px;
-  }
-
-  .top-nav {
-    position: relative;
-    top: 0;
-    right: 0;
-    justify-content: center;
-    margin-bottom: 20px;
   }
 }
 
