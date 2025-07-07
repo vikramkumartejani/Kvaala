@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* grab <button> elements instead of <a> */
   const navLinks = document.querySelectorAll(".navigation button");
 
-  /* map their data‑target attribute to the actual sections */
   const sections = Array.from(navLinks)
     .map(btn => document.getElementById(btn.dataset.target))
     .filter(Boolean);
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* click: smooth‑scroll & set active */
   navLinks.forEach(btn =>
     btn.addEventListener("click", () => {
       const id = btn.dataset.target;
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
-  /* ---------------- intro / description visibility logic ---------------- */
   function handleIntroDescr() {
     const vh = window.innerHeight;
     const introRect = intro.getBoundingClientRect();
@@ -54,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return false;
   }
 
-  /* ---------------- IntersectionObserver for the rest ---------------- */
   const restSections = sections.filter(sec => sec !== intro && sec !== descr);
 
   const io = new IntersectionObserver(entries => {
@@ -69,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   restSections.forEach(sec => io.observe(sec));
 
-  /* ---------------- throttled scroll listener ---------------- */
   let ticking = false;
   window.addEventListener("scroll", () => {
     if (!ticking) {
@@ -81,6 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, { passive: true });
 
-  /* run once on load */
   handleIntroDescr();
 });
