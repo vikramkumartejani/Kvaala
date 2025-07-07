@@ -299,7 +299,7 @@ body {
   font-family: Figtree, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   border-radius: 8px;
   white-space: nowrap;
 }
@@ -307,14 +307,14 @@ body {
 .nav-link:hover {
   background-color: #ef580d;
   color: white;
-  transition: background 0.2s ease, color 0.4s ease;
+  transition: background 0.5s ease, color 0.4s ease;
 }
 
 .nav-link.active {
   background-color: white;
   color: #ff6c00;
   font-weight: 600;
-  transition: background 0.2s ease, color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .nav-link.active:hover {
@@ -391,7 +391,7 @@ body {
 
 .terms-main {
   flex: 1;
-  min-width: 300px;
+  width: 100%;
 }
 
 .terms-sidebar {
@@ -401,7 +401,15 @@ body {
 
 @media (width <= 1024px) {
   .terms-sidebar {
-    width: 241px;
+    width: 285px;
+    min-width: 285px;
+  }
+}
+
+@media (width <= 768px) {
+  .terms-sidebar {
+    width: 100%;
+    min-width: auto;
   }
 }
 
@@ -683,7 +691,7 @@ strong {
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0 0.5rem;
-  transition: color 0.2s;
+  transition: color 0.5s;
 }
 
 .toggle-password:focus {
@@ -707,7 +715,7 @@ strong {
   display: flex;
   margin-bottom: 0.5rem;
   padding: 0.25rem 0.5rem;
-  transition: outline 0.2s ease;
+  transition: outline 0.5s ease;
   width: 100%;
 }
 
