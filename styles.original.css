@@ -264,6 +264,7 @@ body {
   margin: auto 0;
 }
 
+.logo a,
 .logo img {
   height: 50px;
 }

@@ -260,12 +260,15 @@ body {
   margin: auto 0;
 }
 
+.logo a,
 .logo img {
   height: 50px;
-  width: 227px;
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  height: 76px;
   width: fit-content;
 }
 
@@ -296,14 +299,14 @@ body {
 .nav-link:hover {
   background-color: #ef580d;
   color: white;
-  transition: background 0.4s ease, color 0.4s ease;
+  transition: background 0.2s ease, color 0.4s ease;
 }
 
 .nav-link.active {
   background-color: white;
   color: #ff6c00;
   font-weight: 600;
-  transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.2s ease, color 0.5s ease;
 }
 
 .nav-link.active:hover {
@@ -369,7 +372,7 @@ body {
 .terms-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 74px;
+  gap: 60px;
 }
 
 @media (width <= 1440px) {
@@ -384,7 +387,7 @@ body {
 }
 
 .terms-sidebar {
-  min-width: 320px;
+  min-width: 329px;
   margin-left: 40px;
 }
 
