@@ -1,4 +1,4 @@
-const PASSWORD = "Vikr@m123@";
+const PASSWORD = "Kr!stJ&nK2025!";
 const overlay = document.getElementById("password-overlay");
 const input = document.getElementById("password-input");
 const submit = document.getElementById("password-submit");
